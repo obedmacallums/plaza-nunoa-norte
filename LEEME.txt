@@ -1,0 +1,120 @@
+Tour virtual 360
+================
+
+Este tour es un sitio estático completo: no necesita servidor de aplicación,
+base de datos. El fondo del minimapa usa OpenStreetMap y necesita internet,
+sin API key. Las fotos y el trayecto se incluyen en el tour. Para publicarlo, subí todo el
+contenido de esta carpeta a cualquier hosting de archivos y abrí index.html.
+
+IMPORTANTE: no funciona haciendo doble clic en index.html.
+
+Los navegadores tratan cada archivo abierto con file:// como si viniera de un
+sitio distinto, así que se niegan a usar estas imágenes como textura y el
+panorama sale en negro. Es una restricción del navegador, no del tour.
+
+Para probarlo en tu computadora, abrí una terminal en esta carpeta y ejecutá:
+
+    python -m http.server 8000
+
+y después entrá a http://localhost:8000 en el navegador.
+
+Al republicar sobre la misma dirección
+--------------------------------------
+
+Si subís una versión nueva del tour a la misma URL, quien ya lo había abierto
+puede seguir viendo la anterior un rato: el navegador guarda en caché el
+index.html y el configuracion.json. Las fotos no se ven afectadas —son las
+mismas—, pero un cambio de escenas o de ajustes sí puede tardar en aparecer.
+
+Se resuelve invalidando la caché desde el panel del hosting, o pidiéndole a
+quien lo esté viendo que recargue con Ctrl+F5 (Cmd+Shift+R en Mac).
+
+Contenido
+---------
+
+  index.html         el tour
+  configuracion.json las escenas, los saltos y los ajustes del visor
+  pannellum/         el visor: Pannellum 2.5.7, licencia MIT
+                     y Leaflet 1.9.4, licencia BSD-2-Clause
+  escenas/           las fotos, cortadas en mosaicos por nivel de zoom
+
+Inicio
+------
+El tour abre en la escena que indica "firstScene" en configuracion.json. Si en
+la aplicación se fijó un inicio, esa escena trae además "yaw", "pitch" y
+"hfov": hacia dónde mira y con cuánto zoom al abrir.
+
+Minimapa
+--------
+El minimapa está oculto al abrir el tour.
+El icono de mapa sobre los controles inferiores derechos permite ocultar y
+mostrar el minimapa con una transición suave. Permanece oculto al cambiar
+de fotograma; al mostrarlo vuelve centrado en el fotograma actual.
+Al mantener el cursor sobre el mapa durante 250 ms, se amplía solo hacia
+arriba, con una transición suave de 450 ms, y muestra el trayecto de
+los frames incluidos, unidos en el orden de selección (no calcula rutas por
+calles). Al salir se reduce. También puede ampliarse con el botón, para uso
+táctil o con teclado, y reducirse con Escape.
+Permite arrastrar, usar la rueda, los botones +/− o pellizcar para hacer zoom.
+Al reducirse, el mapa vuelve a centrar el frame actual y recupera el zoom
+inicial, igual que al avanzar por el tour con el minimapa pequeño.
+Mientras está ampliado permite explorar libremente. El botón de centrar
+regresa al frame actual; el de trayecto encuadra todos los frames.
+El punto con borde blanco marca la ubicación del fotograma; el cono
+indica la dirección y amplitud de la vista actual del panorama. Los dos,
+y también la línea del recorrido, toman el color de acento del tour.
+El mapa mantiene el norte arriba. Sin coordenadas válidas no se muestra.
+El fondo utiliza https://tile.openstreetmap.org y conserva la atribución.
+El hosting debe permitir enviar Referer y respetar la política del servicio:
+https://operations.osmfoundation.org/policies/tiles/
+
+Flechas de dirección
+--------------------
+En todos los tours, lineales o interconectados, un juego de flechas blancas
+rodea el centro de la imagen y apunta hacia cada panorama vecino, incluso
+hacia los que quedan
+fuera de la vista. Al hacer clic en una se navega hasta ese panorama
+conservando el rumbo.
+En escritorio están ocultas al abrir el tour, porque se dibujan sobre el centro de la
+imagen. En el celular (un dispositivo sin hover) arrancan visibles: ahí son la única forma
+de navegar, porque los íconos de cada destino (la flecha en un círculo) se esconden. Se
+esconden también mientras el minimapa está ampliado o la ficha GNSS abierta, que ocuparían
+el mismo lugar, y vuelven al cerrarlos. El icono de flecha sobre los controles inferiores derechos las
+muestra y las vuelve a ocultar, y queda teñido con el color de acento mientras se ven. El estado
+se mantiene al cambiar de fotograma.
+
+Contorno de la máscara
+----------------------
+Las escenas donde se rellenó o difuminó una zona (la cámara, el operador)
+traen su contorno en escenas/<n>/mascara.png: la zona tratada en escala de
+grises, sobre una equirectangular completa. Si alguna escena la tiene,
+justo encima del icono de flecha de los controles inferiores derechos aparece
+un icono de borde punteado. Al pulsarlo se dibuja una línea fina alrededor de esa zona, con
+el color de acento del tour y un halo oscuro que la separa del fondo; al volver
+a pulsarlo se oculta. Arranca oculto, y el estado se mantiene al cambiar de
+fotograma. Las escenas sin zona tratada no dibujan nada. Hace falta un
+navegador con WebGL 2; sin él, el icono no aparece.
+La línea conserva su grosor al acercar o alejar. El tour no se altera: es un
+dibujo encima de la imagen. Se dibuja con la vista exacta que Pannellum acaba de
+renderizar: pannellum.js lleva una línea agregada, tras el render, que llama a
+viewer.alRenderizar(pitch, yaw, hfov) si existe. Al actualizar Pannellum hay que volver
+a ponerla (está marcada en el comentario de la primera línea del archivo).
+
+Pantalla vertical
+-----------------
+Pannellum fija el ancho de campo, y en un celular vertical eso abre el alto hasta un ojo
+de pez. En vertical, zoom-vertical.js baja el ancho al que da ~80° de alto con la
+proporción real de la pantalla (VFOV_EN_VERTICAL), y al apaisar vuelve al de la
+configuración. El pellizco sigue funcionando.
+
+Color del tour
+--------------
+Un solo color de acento tiñe los iconos activos de la columna derecha, las
+flechas de navegación, el contorno de la máscara y el minimapa. Viaja en
+configuracion.json bajo la clave "acento" y se puede cambiar ahí a mano: pannellum/paleta.js deriva de él los
+tonos que cada elemento necesita —el resaltado de una flecha, el punto del
+mapa un escalón más oscuro que la línea sobre la que se apoya— sin que haya
+que acertarle a cada uno por separado. Un valor mal escrito, o un tour
+generado antes de que la clave existiera, se ven con el azul de siempre.
+Los contornos de foco del teclado NO siguen el acento: son azules a propósito,
+por convención de accesibilidad.

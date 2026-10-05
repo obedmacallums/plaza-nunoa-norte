@@ -1,0 +1,3185 @@
+{
+ "conexiones": {
+  "modo": "interconectado",
+  "separacion_m": 10.5,
+  "radio_m": null,
+  "max_hotspots": 3,
+  "separacion_angular_grados": 30.0
+ },
+ "conexionesManuales": {
+  "pares": []
+ },
+ "pannellum": {
+  "default": {
+   "firstScene": "0059",
+   "title": "Plaza Ñuñoa Norte",
+   "autoLoad": true,
+   "compass": true,
+   "sceneFadeDuration": 400
+  },
+  "scenes": {
+   "0001": {
+    "type": "multires",
+    "northOffset": 81.35454768071631,
+    "gnss": {
+     "lat": -33.454255871937,
+     "lon": -70.59325335316397,
+     "alt": 616.7868429955503,
+     "rumbo": 81.35454768071631,
+     "instante": "2026-09-18T13:55:59.166667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0001",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0002",
+      "yaw": -174.15773655941473,
+      "pitch": -12.765326310890291,
+      "distanciaM": 8.692911562940045,
+      "text": "8,7 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0037",
+      "yaw": 93.21818481777467,
+      "pitch": -13.23628511085751,
+      "distanciaM": 9.049235171215907,
+      "text": "9,0 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0002": {
+    "type": "multires",
+    "northOffset": 28.885297578229824,
+    "gnss": {
+     "lat": -33.454259695222646,
+     "lon": -70.59334694208032,
+     "alt": 616.8173934168948,
+     "rumbo": 28.885297578229824,
+     "instante": "2026-09-18T13:55:51.833333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0002",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0001",
+      "yaw": 58.31151341967535,
+      "pitch": -13.147801230732739,
+      "distanciaM": 8.692911180583321,
+      "text": "8,7 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0003",
+      "yaw": -129.3973427120887,
+      "pitch": -11.633894084827245,
+      "distanciaM": 9.860342987232263,
+      "text": "9,9 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0037",
+      "yaw": 103.09850831783007,
+      "pitch": -11.468130439184483,
+      "distanciaM": 10.5,
+      "text": "12,8 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0003": {
+    "type": "multires",
+    "northOffset": 17.429240667728404,
+    "gnss": {
+     "lat": -33.45427587350525,
+     "lon": -70.59345144306198,
+     "alt": 616.7872761449855,
+     "rumbo": 17.429240667728404,
+     "instante": "2026-09-18T13:55:44.500000+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0003",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0002",
+      "yaw": 62.05871228090774,
+      "pitch": -11.297720963632079,
+      "distanciaM": 9.860341208831493,
+      "text": "9,9 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0004",
+      "yaw": -129.2892990053362,
+      "pitch": -12.760872249752092,
+      "distanciaM": 9.012759965374427,
+      "text": "9,0 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0004": {
+    "type": "multires",
+    "northOffset": 14.030222201877855,
+    "gnss": {
+     "lat": -33.454306053110756,
+     "lon": -70.5935416063963,
+     "alt": 616.7460989018992,
+     "rumbo": 14.030222201877855,
+     "instante": "2026-09-18T13:55:37.833333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0004",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0003",
+      "yaw": 54.10971256959553,
+      "pitch": -12.261906687082265,
+      "distanciaM": 9.012757263504984,
+      "text": "9,0 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0005",
+      "yaw": -107.03004607051167,
+      "pitch": -11.929351231118964,
+      "distanciaM": 9.517866975302653,
+      "text": "9,5 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0005": {
+    "type": "multires",
+    "northOffset": 32.87295392883284,
+    "gnss": {
+     "lat": -33.45431053260875,
+     "lon": -70.59364405911705,
+     "alt": 616.7352768934891,
+     "rumbo": 32.87295392883284,
+     "instante": "2026-09-18T13:55:31.166667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0005",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0004",
+      "yaw": 54.127222047851745,
+      "pitch": -11.804568740312993,
+      "distanciaM": 9.517866484976064,
+      "text": "9,5 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0006",
+      "yaw": -114.13953252653636,
+      "pitch": -13.590735431149827,
+      "distanciaM": 8.840259061370427,
+      "text": "8,8 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0056",
+      "yaw": 148.7726354389685,
+      "pitch": -17.97013468750915,
+      "distanciaM": 8.599182481981716,
+      "text": "8,6 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0006": {
+    "type": "multires",
+    "northOffset": 48.006317614172694,
+    "gnss": {
+     "lat": -33.454298461177444,
+     "lon": -70.59373824364187,
+     "alt": 616.5981061937466,
+     "rumbo": 48.006317614172694,
+     "instante": "2026-09-18T13:55:25.166667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0006",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0005",
+      "yaw": 50.727102591100135,
+      "pitch": -11.89934387139164,
+      "distanciaM": 8.840260263639147,
+      "text": "8,8 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0007",
+      "yaw": -114.4256240981855,
+      "pitch": -12.895953804280515,
+      "distanciaM": 9.822796156802774,
+      "text": "9,8 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0056",
+      "yaw": 91.48356562119204,
+      "pitch": -13.514726016291695,
+      "distanciaM": 10.5,
+      "text": "13,1 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0007": {
+    "type": "multires",
+    "northOffset": 46.91772940708113,
+    "gnss": {
+     "lat": -33.45426312221227,
+     "lon": -70.59383528252854,
+     "alt": 616.3491156052675,
+     "rumbo": 46.91772940708113,
+     "instante": "2026-09-18T13:55:18.500000+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0007",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0006",
+      "yaw": 66.662955548025,
+      "pitch": -10.107362585285886,
+      "distanciaM": 9.822799519275572,
+      "text": "9,8 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0008",
+      "yaw": -127.84308270416892,
+      "pitch": -15.580675702230996,
+      "distanciaM": 8.229885742358055,
+      "text": "8,2 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0008": {
+    "type": "multires",
+    "northOffset": 36.31184953704262,
+    "gnss": {
+     "lat": -33.45425144877664,
+     "lon": -70.59392288228794,
+     "alt": 616.0542820341739,
+     "rumbo": 36.31184953704262,
+     "instante": "2026-09-18T13:55:12.833333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0008",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0007",
+      "yaw": 62.76279596457988,
+      "pitch": -11.705599407092905,
+      "distanciaM": 8.229886822694635,
+      "text": "8,2 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0009",
+      "yaw": -124.51321811191809,
+      "pitch": -14.752810724497158,
+      "distanciaM": 8.853623967955935,
+      "text": "8,9 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0010",
+      "yaw": -167.6012409516395,
+      "pitch": -12.542050769414011,
+      "distanciaM": 10.5,
+      "text": "13,3 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0009": {
+    "type": "multires",
+    "northOffset": 9.834485218885511,
+    "gnss": {
+     "lat": -33.45424894967274,
+     "lon": -70.59401826862313,
+     "alt": 615.7228529329683,
+     "rumbo": 9.834485218885511,
+     "instante": "2026-09-18T13:55:06.500000+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0009",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0008",
+      "yaw": 81.96414615443689,
+      "pitch": -10.672887389849903,
+      "distanciaM": 8.853624222864195,
+      "text": "8,9 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0010",
+      "yaw": 177.55098651152082,
+      "pitch": -12.886315756127436,
+      "distanciaM": 9.159187912947539,
+      "text": "9,2 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0010": {
+    "type": "multires",
+    "northOffset": 305.11079111103686,
+    "gnss": {
+     "lat": -33.45433063686503,
+     "lon": -70.59403095940412,
+     "alt": 615.6274210230544,
+     "rumbo": 305.11079111103686,
+     "instante": "2026-09-18T13:54:59.166667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0010",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0009",
+      "yaw": 62.27467373890312,
+      "pitch": -11.746727834600021,
+      "distanciaM": 9.159187770379457,
+      "text": "9,2 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0011",
+      "yaw": -123.35422510542404,
+      "pitch": -11.669911652073004,
+      "distanciaM": 10.202550554155428,
+      "text": "10,2 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0008",
+      "yaw": 103.59979153218256,
+      "pitch": -9.005764800116246,
+      "distanciaM": 10.5,
+      "text": "13,3 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0011": {
+    "type": "multires",
+    "northOffset": 299.7068229244443,
+    "gnss": {
+     "lat": -33.45442234749002,
+     "lon": -70.5940343304299,
+     "alt": 615.5201613184377,
+     "rumbo": 299.7068229244443,
+     "instante": "2026-09-18T13:54:52+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0011",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0010",
+      "yaw": 62.04974122455985,
+      "pitch": -10.509823089655193,
+      "distanciaM": 10.202550544016683,
+      "text": "10,2 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0012",
+      "yaw": -118.57848344577707,
+      "pitch": -12.277985500930878,
+      "distanciaM": 9.540591725953085,
+      "text": "9,5 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0012": {
+    "type": "multires",
+    "northOffset": 299.83238783134414,
+    "gnss": {
+     "lat": -33.45450813145553,
+     "lon": -70.59403635552006,
+     "alt": 615.4438156007919,
+     "rumbo": 299.83238783134414,
+     "instante": "2026-09-18T13:54:45.500000+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0012",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0011",
+      "yaw": 61.29595053137626,
+      "pitch": -11.39961650576339,
+      "distanciaM": 9.540591722293186,
+      "text": "9,5 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0013",
+      "yaw": -117.52509723276307,
+      "pitch": -12.107860233292401,
+      "distanciaM": 9.89166804056521,
+      "text": "9,9 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0013": {
+    "type": "multires",
+    "northOffset": 300.08065293443644,
+    "gnss": {
+     "lat": -33.45459701724349,
+     "lon": -70.59404064803893,
+     "alt": 615.321806301261,
+     "rumbo": 300.08065293443644,
+     "instante": "2026-09-18T13:54:39+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0013",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0012",
+      "yaw": 62.226635301620036,
+      "pitch": -10.74999355747961,
+      "distanciaM": 9.89166802413143,
+      "text": "9,9 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0014",
+      "yaw": -119.18695811017017,
+      "pitch": -11.740459614769268,
+      "distanciaM": 9.807148719411078,
+      "text": "9,8 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0014": {
+    "type": "multires",
+    "northOffset": 299.2428632628473,
+    "gnss": {
+     "lat": -33.454685204322026,
+     "lon": -70.5940422968565,
+     "alt": 615.2836200247569,
+     "rumbo": 299.2428632628473,
+     "instante": "2026-09-18T13:54:32.500000+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0014",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0013",
+      "yaw": 61.65083065268544,
+      "pitch": -11.312089483124522,
+      "distanciaM": 9.8071487169847,
+      "text": "9,8 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0015",
+      "yaw": -118.41974269121869,
+      "pitch": -11.852257109617845,
+      "distanciaM": 10.05496027331205,
+      "text": "10,1 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0015": {
+    "type": "multires",
+    "northOffset": 299.21991219711157,
+    "gnss": {
+     "lat": -33.454775621420985,
+     "lon": -70.59404385385263,
+     "alt": 615.173456597793,
+     "rumbo": 299.21991219711157,
+     "instante": "2026-09-18T13:54:25.666667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0015",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0014",
+      "yaw": 61.603207516356576,
+      "pitch": -10.644598064309426,
+      "distanciaM": 10.054960271148351,
+      "text": "10,1 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0016",
+      "yaw": -117.04124426810259,
+      "pitch": -12.620381608582903,
+      "distanciaM": 9.239768314250703,
+      "text": "9,2 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0016": {
+    "type": "multires",
+    "northOffset": 294.3583543275288,
+    "gnss": {
+     "lat": -33.45485865658751,
+     "lon": -70.59404764007893,
+     "alt": 615.1046723583556,
+     "rumbo": 294.3583543275288,
+     "instante": "2026-09-18T13:54:19.166667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0016",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0015",
+      "yaw": 67.82031151722879,
+      "pitch": -11.805511353556664,
+      "distanciaM": 9.239768301463778,
+      "text": "9,2 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0017",
+      "yaw": -112.67634174323354,
+      "pitch": -12.292846068000054,
+      "distanciaM": 9.818718817428076,
+      "text": "9,8 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0048",
+      "yaw": 176.18338347773573,
+      "pitch": -11.986981520378356,
+      "distanciaM": 10.5,
+      "text": "17,4 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0017": {
+    "type": "multires",
+    "northOffset": 293.4422626616359,
+    "gnss": {
+     "lat": -33.45494692040013,
+     "lon": -70.59405074664937,
+     "alt": 614.9651296523803,
+     "rumbo": 293.4422626616359,
+     "instante": "2026-09-18T13:54:12.333333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0017",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0016",
+      "yaw": 68.23974821154331,
+      "pitch": -10.729244981618333,
+      "distanciaM": 9.81871880881729,
+      "text": "9,8 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0018",
+      "yaw": -111.66644757019546,
+      "pitch": -11.606415655484044,
+      "distanciaM": 10.101458854349975,
+      "text": "10,1 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0047",
+      "yaw": 177.76388568506235,
+      "pitch": -12.820225470189536,
+      "distanciaM": 10.5,
+      "text": "11,8 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0018": {
+    "type": "multires",
+    "northOffset": 294.59101909193987,
+    "gnss": {
+     "lat": -33.455037721372186,
+     "lon": -70.59405412086066,
+     "alt": 614.8904191465032,
+     "rumbo": 294.59101909193987,
+     "instante": "2026-09-18T13:54:05.166667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0018",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0017",
+      "yaw": 67.18479414114569,
+      "pitch": -10.79087732823381,
+      "distanciaM": 10.10145884419207,
+      "text": "10,1 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0019",
+      "yaw": -116.85277151158954,
+      "pitch": -11.956519129758517,
+      "distanciaM": 9.549303733744786,
+      "text": "9,5 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0046",
+      "yaw": 170.23768086105116,
+      "pitch": -21.85756445748011,
+      "distanciaM": 6.3549877764447,
+      "text": "6,4 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0019": {
+    "type": "multires",
+    "northOffset": 259.35275508630724,
+    "gnss": {
+     "lat": -33.45512353342094,
+     "lon": -70.59405005863174,
+     "alt": 614.8682249888436,
+     "rumbo": 259.35275508630724,
+     "instante": "2026-09-18T13:53:58+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0019",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0018",
+      "yaw": 98.38549472999318,
+      "pitch": -11.701381413503295,
+      "distanciaM": 9.549303719026438,
+      "text": "9,5 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0020",
+      "yaw": -160.3548291136571,
+      "pitch": -9.46042055571916,
+      "distanciaM": 9.655279972781099,
+      "text": "9,7 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0046",
+      "yaw": 136.72094988904013,
+      "pitch": -14.46896791301793,
+      "distanciaM": 9.793173445603005,
+      "text": "9,8 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0020": {
+    "type": "multires",
+    "northOffset": 219.37576706930386,
+    "gnss": {
+     "lat": -33.455137113836855,
+     "lon": -70.59394726392033,
+     "alt": 615.2593410195316,
+     "rumbo": 219.37576706930386,
+     "instante": "2026-09-18T13:53:50.666667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0020",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0019",
+      "yaw": 59.62216028950317,
+      "pitch": -13.909372242166087,
+      "distanciaM": 9.655278497605181,
+      "text": "9,7 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0021",
+      "yaw": -138.98782387275995,
+      "pitch": -10.96979019263586,
+      "distanciaM": 9.733921206719028,
+      "text": "9,7 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0021": {
+    "type": "multires",
+    "northOffset": 185.47522794535698,
+    "gnss": {
+     "lat": -33.45512249686208,
+     "lon": -70.59384381378095,
+     "alt": 615.3725840919049,
+     "rumbo": 185.47522794535698,
+     "instante": "2026-09-18T13:53:43.833333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0021",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0020",
+      "yaw": 74.91271684125425,
+      "pitch": -12.248882835645825,
+      "distanciaM": 9.73392280181137,
+      "text": "9,7 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0022",
+      "yaw": -128.96913215135862,
+      "pitch": -8.893016015184259,
+      "distanciaM": 10.5,
+      "text": "10,8 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0022": {
+    "type": "multires",
+    "northOffset": 173.68764362031135,
+    "gnss": {
+     "lat": -33.4550686914836,
+     "lon": -70.59374635709698,
+     "alt": 615.7412533724248,
+     "rumbo": 173.68764362031135,
+     "instante": "2026-09-18T13:53:36.500000+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0022",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0021",
+      "yaw": 62.81846853528134,
+      "pitch": -12.652099921062407,
+      "distanciaM": 10.5,
+      "text": "10,8 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0023",
+      "yaw": -115.80261713472657,
+      "pitch": -11.282226582186176,
+      "distanciaM": 9.460722714381273,
+      "text": "9,5 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0023": {
+    "type": "multires",
+    "northOffset": 238.8907570097646,
+    "gnss": {
+     "lat": -33.455023460023426,
+     "lon": -70.59365998325742,
+     "alt": 615.8538661804885,
+     "rumbo": 238.8907570097646,
+     "instante": "2026-09-18T13:53:30+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0023",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0022",
+      "yaw": -1.005717066851588,
+      "pitch": -12.587828655023433,
+      "distanciaM": 9.460726254633116,
+      "text": "9,5 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0024",
+      "yaw": -134.07993600351352,
+      "pitch": -12.768330668575526,
+      "distanciaM": 8.842785927605393,
+      "text": "8,8 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0060",
+      "yaw": 120.24974266448748,
+      "pitch": -17.62437605382489,
+      "distanciaM": 9.418701827931518,
+      "text": "9,4 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0024": {
+    "type": "multires",
+    "northOffset": 287.16989641925977,
+    "gnss": {
+     "lat": -33.45504378888952,
+     "lon": -70.59356783278581,
+     "alt": 615.8499738641011,
+     "rumbo": 287.16989641925977,
+     "instante": "2026-09-18T13:53:24+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0024",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0023",
+      "yaw": -2.359072093377847,
+      "pitch": -12.720348400770586,
+      "distanciaM": 8.842783989967455,
+      "text": "8,8 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0025",
+      "yaw": -151.8025792523387,
+      "pitch": -11.630319112134304,
+      "distanciaM": 9.617923870097792,
+      "text": "9,6 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0060",
+      "yaw": 36.175310378258246,
+      "pitch": -14.486679137156354,
+      "distanciaM": 10.5,
+      "text": "14,6 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0025": {
+    "type": "multires",
+    "northOffset": 300.59979105553555,
+    "gnss": {
+     "lat": -33.45510534168859,
+     "lon": -70.59349499658587,
+     "alt": 615.8703930986379,
+     "rumbo": 300.59979105553555,
+     "instante": "2026-09-18T13:53:17.333333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0025",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0024",
+      "yaw": 14.767546445482765,
+      "pitch": -11.86352152395899,
+      "distanciaM": 9.617920500215092,
+      "text": "9,6 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0026",
+      "yaw": 165.76593897577845,
+      "pitch": -12.616741271259254,
+      "distanciaM": 8.784490299152756,
+      "text": "8,8 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0026": {
+    "type": "multires",
+    "northOffset": 264.76260304212644,
+    "gnss": {
+     "lat": -33.45512760156124,
+     "lon": -70.59340414404065,
+     "alt": 615.904131714056,
+     "rumbo": 264.76260304212644,
+     "instante": "2026-09-18T13:53:10.833333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0026",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0025",
+      "yaw": 21.60313096562743,
+      "pitch": -13.035165642003129,
+      "distanciaM": 8.784488223119507,
+      "text": "8,8 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0027",
+      "yaw": -175.23493448541927,
+      "pitch": -11.821334262226225,
+      "distanciaM": 9.558289838702175,
+      "text": "9,6 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0051",
+      "yaw": 122.0460686964235,
+      "pitch": -27.438622291457555,
+      "distanciaM": 8.879406501791934,
+      "text": "8,9 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0027": {
+    "type": "multires",
+    "northOffset": 224.83024079996162,
+    "gnss": {
+     "lat": -33.455126892939404,
+     "lon": -70.59330111754164,
+     "alt": 615.9035862521574,
+     "rumbo": 224.83024079996162,
+     "instante": "2026-09-18T13:53:02.333333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0027",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0026",
+      "yaw": 44.697427760605336,
+      "pitch": -11.815069084644334,
+      "distanciaM": 9.558289916808505,
+      "text": "9,6 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0028",
+      "yaw": -177.93161466052177,
+      "pitch": -31.843814985011218,
+      "distanciaM": 3.261493322664681,
+      "text": "3,3 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0051",
+      "yaw": 99.8804646190963,
+      "pitch": -25.61996021363873,
+      "distanciaM": 9.612586781175494,
+      "text": "9,6 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0028": {
+    "type": "multires",
+    "northOffset": 220.19657202600894,
+    "gnss": {
+     "lat": -33.455106851108184,
+     "lon": -70.59327544850083,
+     "alt": 615.8779201427636,
+     "rumbo": 220.19657202600894,
+     "instante": "2026-09-18T13:52:59.666667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0028",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0027",
+      "yaw": 6.702060720310698,
+      "pitch": -31.188470393400323,
+      "distanciaM": 3.2614937245425697,
+      "text": "3,3 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0029",
+      "yaw": 150.04485367220298,
+      "pitch": -11.22543073130514,
+      "distanciaM": 9.331126973015477,
+      "text": "9,3 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0029": {
+    "type": "multires",
+    "northOffset": 168.97955584796435,
+    "gnss": {
+     "lat": -33.45502427128776,
+     "lon": -70.59325756550918,
+     "alt": 616.0260028724135,
+     "rumbo": 168.97955584796435,
+     "instante": "2026-09-18T13:52:52.333333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0029",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0028",
+      "yaw": 21.26187939718875,
+      "pitch": -12.963981217760349,
+      "distanciaM": 9.331127253929743,
+      "text": "9,3 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0030",
+      "yaw": -166.74659730992565,
+      "pitch": -12.021777679548746,
+      "distanciaM": 9.135582989453098,
+      "text": "9,1 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0052",
+      "yaw": 119.69708578776715,
+      "pitch": -20.27219187811616,
+      "distanciaM": 10.5,
+      "text": "14,9 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0030": {
+    "type": "multires",
+    "northOffset": 169.12993306750337,
+    "gnss": {
+     "lat": -33.45494217540143,
+     "lon": -70.5932537287253,
+     "alt": 616.080545223556,
+     "rumbo": 169.12993306750337,
+     "instante": "2026-09-18T13:52:46.333333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0030",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0029",
+      "yaw": 13.103027582472834,
+      "pitch": -12.67462980287921,
+      "distanciaM": 9.135583002583346,
+      "text": "9,1 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0031",
+      "yaw": -168.4705137158591,
+      "pitch": -10.384046021997397,
+      "distanciaM": 10.414863855473858,
+      "text": "10,4 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0053",
+      "yaw": 111.52454561416158,
+      "pitch": -18.226941933592354,
+      "distanciaM": 10.5,
+      "text": "19,2 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0031": {
+    "type": "multires",
+    "northOffset": 168.2691684072478,
+    "gnss": {
+     "lat": -33.45484851848369,
+     "lon": -70.593252436716,
+     "alt": 616.1720575583437,
+     "rumbo": 168.2691684072478,
+     "instante": "2026-09-18T13:52:39+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0031",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0030",
+      "yaw": 12.390251656561446,
+      "pitch": -11.35509755553381,
+      "distanciaM": 10.414863856963803,
+      "text": "10,4 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0032",
+      "yaw": -168.5172534669125,
+      "pitch": -11.962076347069374,
+      "distanciaM": 8.986915545248172,
+      "text": "9,0 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0032": {
+    "type": "multires",
+    "northOffset": 159.5951168711287,
+    "gnss": {
+     "lat": -33.45476769796811,
+     "lon": -70.59325285615556,
+     "alt": 616.2680459385684,
+     "rumbo": 159.5951168711287,
+     "instante": "2026-09-18T13:52:32.833333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0032",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0031",
+      "yaw": 20.15679783798268,
+      "pitch": -13.128226324110647,
+      "distanciaM": 8.986915545405207,
+      "text": "9,0 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0033",
+      "yaw": -157.84985075249529,
+      "pitch": -11.400925027428785,
+      "distanciaM": 9.336635526157062,
+      "text": "9,3 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0033": {
+    "type": "multires",
+    "northOffset": 162.7721533894968,
+    "gnss": {
+     "lat": -33.45468377053867,
+     "lon": -70.59324979106034,
+     "alt": 616.3852931186574,
+     "rumbo": 162.7721533894968,
+     "instante": "2026-09-18T13:52:26.666667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0033",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0032",
+      "yaw": 18.973114417288514,
+      "pitch": -12.776747262986447,
+      "distanciaM": 9.336635534539163,
+      "text": "9,3 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0034",
+      "yaw": -161.80294418389155,
+      "pitch": -11.317138022663006,
+      "distanciaM": 9.67567923924309,
+      "text": "9,7 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0034": {
+    "type": "multires",
+    "northOffset": 164.44607490364453,
+    "gnss": {
+     "lat": -33.45459676751408,
+     "lon": -70.59324802690458,
+     "alt": 616.4488917474969,
+     "rumbo": 164.44607490364453,
+     "instante": "2026-09-18T13:52:20.333333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0034",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0033",
+      "yaw": 16.523135274220323,
+      "pitch": -12.039481075698875,
+      "distanciaM": 9.67567924202074,
+      "text": "9,7 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0035",
+      "yaw": -163.3385763573823,
+      "pitch": -11.049564711024344,
+      "distanciaM": 10.044108835032368,
+      "text": "10,0 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0035": {
+    "type": "multires",
+    "northOffset": 162.15609819632328,
+    "gnss": {
+     "lat": -33.45450645554744,
+     "lon": -70.59324593430688,
+     "alt": 616.4874961210317,
+     "rumbo": 162.15609819632328,
+     "instante": "2026-09-18T13:52:13+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0035",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0034",
+      "yaw": 18.9514015031055,
+      "pitch": -11.473196997115311,
+      "distanciaM": 10.044108838940378,
+      "text": "10,0 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0036",
+      "yaw": -161.55225539626508,
+      "pitch": -12.127541338980718,
+      "distanciaM": 8.927244083116745,
+      "text": "8,9 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0036": {
+    "type": "multires",
+    "northOffset": 164.64417857737516,
+    "gnss": {
+     "lat": -33.45442617537121,
+     "lon": -70.59324492018297,
+     "alt": 616.5691719249137,
+     "rumbo": 164.64417857737516,
+     "instante": "2026-09-18T13:52:06.166667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0036",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0035",
+      "yaw": 15.959664781681226,
+      "pitch": -13.125818289497364,
+      "distanciaM": 8.927244084034704,
+      "text": "8,9 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0037",
+      "yaw": -164.2197639605833,
+      "pitch": -10.89404896259815,
+      "distanciaM": 9.928482223144574,
+      "text": "9,9 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0037": {
+    "type": "multires",
+    "northOffset": 167.51873312077905,
+    "gnss": {
+     "lat": -33.45433688883507,
+     "lon": -70.59324412745062,
+     "alt": 616.6583170480613,
+     "rumbo": 167.51873312077905,
+     "instante": "2026-09-18T13:51:58.500000+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0037",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0036",
+      "yaw": 12.905681933000693,
+      "pitch": -11.882791246696607,
+      "distanciaM": 9.9284822237055,
+      "text": "9,9 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0001",
+      "yaw": -172.945995581911,
+      "pitch": -11.684624188996287,
+      "distanciaM": 9.049235095582738,
+      "text": "9,0 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0002",
+      "yaw": 144.46509813648436,
+      "pitch": -10.097341713179201,
+      "distanciaM": 10.5,
+      "text": "12,8 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0038": {
+    "type": "multires",
+    "northOffset": 352.22670569922013,
+    "gnss": {
+     "lat": -33.45469494392809,
+     "lon": -70.59360668695575,
+     "alt": 615.618420919427,
+     "rumbo": 352.22670569922013,
+     "instante": "2026-09-18T13:57:43+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0038",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0039",
+      "yaw": 41.04044431144126,
+      "pitch": -15.580421272180676,
+      "distanciaM": 7.236699966037567,
+      "text": "7,2 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0045",
+      "yaw": -98.43819275588109,
+      "pitch": -22.494263685983917,
+      "distanciaM": 4.828418451239808,
+      "text": "4,8 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0055",
+      "yaw": 155.46448655699265,
+      "pitch": -22.45427780387378,
+      "distanciaM": 9.953060917133763,
+      "text": "10,0 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0039": {
+    "type": "multires",
+    "northOffset": 301.80179907552673,
+    "gnss": {
+     "lat": -33.45464052809961,
+     "lon": -70.59356389787096,
+     "alt": 615.6005633803843,
+     "rumbo": 301.80179907552673,
+     "instante": "2026-09-18T13:57:49.833333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0039",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0038",
+      "yaw": -88.53463257405008,
+      "pitch": -15.317714011079579,
+      "distanciaM": 7.236701332512536,
+      "text": "7,2 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0040",
+      "yaw": 43.811868325628154,
+      "pitch": -15.079777257572411,
+      "distanciaM": 7.253357918944924,
+      "text": "7,3 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0040": {
+    "type": "multires",
+    "northOffset": 266.06123127655627,
+    "gnss": {
+     "lat": -33.45457734256909,
+     "lon": -70.59358332347867,
+     "alt": 615.646203432177,
+     "rumbo": 266.06123127655627,
+     "instante": "2026-09-18T13:57:56.166667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0040",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0039",
+      "yaw": -100.44757392319787,
+      "pitch": -15.749864328129696,
+      "distanciaM": 7.253358245215879,
+      "text": "7,3 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0041",
+      "yaw": 31.268774208208697,
+      "pitch": -14.14339571543298,
+      "distanciaM": 7.741578024166012,
+      "text": "7,7 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0041": {
+    "type": "multires",
+    "northOffset": 170.4406556781861,
+    "gnss": {
+     "lat": -33.454545378219784,
+     "lon": -70.59365745578462,
+     "alt": 615.6954188527642,
+     "rumbo": 170.4406556781861,
+     "instante": "2026-09-18T13:57:13.500000+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0041",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0040",
+      "yaw": -53.11065880769674,
+      "pitch": -14.826297257375865,
+      "distanciaM": 7.741580276338709,
+      "text": "7,7 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0042",
+      "yaw": 66.76227974897313,
+      "pitch": -15.478321480752095,
+      "distanciaM": 7.3560139039070656,
+      "text": "7,4 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0057",
+      "yaw": -175.80992729816165,
+      "pitch": -12.216084559226218,
+      "distanciaM": 8.64171059397447,
+      "text": "8,6 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0042": {
+    "type": "multires",
+    "northOffset": 153.70189071090672,
+    "gnss": {
+     "lat": -33.45458121165623,
+     "lon": -70.59372410723414,
+     "alt": 615.6584126245476,
+     "rumbo": 153.70189071090672,
+     "instante": "2026-09-18T13:57:20.666667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0042",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0041",
+      "yaw": -96.49896606428007,
+      "pitch": -14.941529222875069,
+      "distanciaM": 7.356011755999677,
+      "text": "7,4 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0043",
+      "yaw": 41.055351798490506,
+      "pitch": -15.870611199643303,
+      "distanciaM": 7.07726151742668,
+      "text": "7,1 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0043": {
+    "type": "multires",
+    "northOffset": 101.14521818047935,
+    "gnss": {
+     "lat": -33.45464275951091,
+     "lon": -70.59374353917565,
+     "alt": 615.6463257890925,
+     "rumbo": 101.14521818047935,
+     "instante": "2026-09-18T13:57:27.666667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0043",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0042",
+      "yaw": -86.3879856883844,
+      "pitch": -15.689380985567125,
+      "distanciaM": 7.077261191491858,
+      "text": "7,1 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0044",
+      "yaw": 45.10923629893705,
+      "pitch": -14.53463435824237,
+      "distanciaM": 7.69966246051019,
+      "text": "7,7 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0044": {
+    "type": "multires",
+    "northOffset": 49.21906447763073,
+    "gnss": {
+     "lat": -33.45470033738884,
+     "lon": -70.59369743490089,
+     "alt": 615.6500912915143,
+     "rumbo": 49.21906447763073,
+     "instante": "2026-09-18T13:57:35+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0044",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0043",
+      "yaw": -82.96459242508456,
+      "pitch": -14.587135828651348,
+      "distanciaM": 7.699660882835441,
+      "text": "7,7 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0045",
+      "yaw": 51.971317929220305,
+      "pitch": -27.778817453268495,
+      "distanciaM": 3.8557794105581986,
+      "text": "3,9 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0050",
+      "yaw": 163.36700390721785,
+      "pitch": -14.404930725105443,
+      "distanciaM": 9.58799268934511,
+      "text": "9,6 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0045": {
+    "type": "multires",
+    "northOffset": 27.422816325554944,
+    "gnss": {
+     "lat": -33.45470706692161,
+     "lon": -70.59365666335992,
+     "alt": 615.6189908380915,
+     "rumbo": 27.422816325554944,
+     "instante": "2026-09-18T13:57:38.500000+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0045",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0044",
+      "yaw": -106.23243307217285,
+      "pitch": -27.050491618273824,
+      "distanciaM": 3.8557791225941433,
+      "text": "3,9 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0038",
+      "yaw": 46.36569447037277,
+      "pitch": -22.50581122160445,
+      "distanciaM": 4.82841782881589,
+      "text": "4,8 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0058",
+      "yaw": 161.52348624197407,
+      "pitch": -16.04650480369472,
+      "distanciaM": 8.778005853208274,
+      "text": "8,8 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0046": {
+    "type": "multires",
+    "northOffset": 148.685574698342,
+    "gnss": {
+     "lat": -33.45505234822768,
+     "lon": -70.59398790113369,
+     "alt": 614.3411961928316,
+     "rumbo": 148.685574698342,
+     "instante": "2026-09-18T13:59:18.666667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0046",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0019",
+      "yaw": 67.38815266269714,
+      "pitch": -8.553621672156003,
+      "distanciaM": 9.79317623305229,
+      "text": "9,8 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0047",
+      "yaw": -114.23641201569977,
+      "pitch": -11.308064254612107,
+      "distanciaM": 9.061207604731521,
+      "text": "9,1 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0018",
+      "yaw": 136.14312764578426,
+      "pitch": -12.85965184018811,
+      "distanciaM": 6.354986774682723,
+      "text": "6,4 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0047": {
+    "type": "multires",
+    "northOffset": 147.19215195095916,
+    "gnss": {
+     "lat": -33.45498514975402,
+     "lon": -70.5939326506572,
+     "alt": 614.5292619430702,
+     "rumbo": 147.19215195095916,
+     "instante": "2026-09-18T13:59:11.333333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0047",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0046",
+      "yaw": 67.25703144389382,
+      "pitch": -13.57567538694099,
+      "distanciaM": 9.061209851708622,
+      "text": "9,1 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0048",
+      "yaw": -112.05051416486606,
+      "pitch": -10.491933016196134,
+      "distanciaM": 9.74243202537769,
+      "text": "9,7 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0017",
+      "yaw": 144.01400491427148,
+      "pitch": -8.720443779392157,
+      "distanciaM": 10.5,
+      "text": "11,8 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0048": {
+    "type": "multires",
+    "northOffset": 146.18700528928142,
+    "gnss": {
+     "lat": -33.45491350354573,
+     "lon": -70.59387220422032,
+     "alt": 614.7250276673685,
+     "rumbo": 146.18700528928142,
+     "instante": "2026-09-18T13:59:03.666667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0048",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0047",
+      "yaw": 68.95465477938401,
+      "pitch": -12.70119347621345,
+      "distanciaM": 9.74243469235946,
+      "text": "9,7 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0049",
+      "yaw": -110.11721381643355,
+      "pitch": -10.284529227248127,
+      "distanciaM": 9.658291500103159,
+      "text": "9,7 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0016",
+      "yaw": 144.35474442379757,
+      "pitch": -9.571920213140434,
+      "distanciaM": 10.5,
+      "text": "17,4 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0049": {
+    "type": "multires",
+    "northOffset": 149.74831932789405,
+    "gnss": {
+     "lat": -33.45484329529706,
+     "lon": -70.59381090871719,
+     "alt": 614.9725125146259,
+     "rumbo": 149.74831932789405,
+     "instante": "2026-09-18T13:58:56+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0049",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0048",
+      "yaw": 66.32149422227747,
+      "pitch": -13.099602580806625,
+      "distanciaM": 9.65829421090273,
+      "text": "9,7 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0050",
+      "yaw": -115.29497218916251,
+      "pitch": -10.663332216250124,
+      "distanciaM": 9.480515500314915,
+      "text": "9,5 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0050": {
+    "type": "multires",
+    "northOffset": 148.2425297949821,
+    "gnss": {
+     "lat": -33.45477299073274,
+     "lon": -70.59375309550684,
+     "alt": 615.1874336534149,
+     "rumbo": 148.2425297949821,
+     "instante": "2026-09-18T13:58:48.666667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0050",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0049",
+      "yaw": 66.21083901438135,
+      "pitch": -13.150071016633985,
+      "distanciaM": 9.480517960442555,
+      "text": "9,5 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0044",
+      "yaw": -115.65648319447854,
+      "pitch": -9.109293455723982,
+      "distanciaM": 9.587990359241033,
+      "text": "9,6 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0051": {
+    "type": "multires",
+    "northOffset": 86.01299937104834,
+    "gnss": {
+     "lat": -33.4550563300875,
+     "lon": -70.59336097661546,
+     "alt": 613.2938881884552,
+     "rumbo": 86.01299937104834,
+     "instante": "2026-09-18T14:01:32.666667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0051",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0027",
+      "yaw": 58.69768406200603,
+      "pitch": 3.6292399437946536,
+      "distanciaM": 9.61258939183099,
+      "text": "9,6 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0052",
+      "yaw": -114.48578633458504,
+      "pitch": -11.521897250723445,
+      "distanciaM": 9.482888286528276,
+      "text": "9,5 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0026",
+      "yaw": 120.79569132427395,
+      "pitch": 3.9315105075546075,
+      "distanciaM": 8.87940798635224,
+      "text": "8,9 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0052": {
+    "type": "multires",
+    "northOffset": 89.01115556288119,
+    "gnss": {
+     "lat": -33.45498136378354,
+     "lon": -70.59340970775455,
+     "alt": 613.3607982914448,
+     "rumbo": 89.01115556288119,
+     "instante": "2026-09-18T14:01:24.666667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0052",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0051",
+      "yaw": 62.51603671482778,
+      "pitch": -12.295995224759903,
+      "distanciaM": 9.482890149867243,
+      "text": "9,5 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0053",
+      "yaw": -118.21568397280527,
+      "pitch": -12.1362061521484,
+      "distanciaM": 9.064096695719265,
+      "text": "9,1 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0029",
+      "yaw": 19.6654774720524,
+      "pitch": -0.6641935711400394,
+      "distanciaM": 10.5,
+      "text": "14,9 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0053": {
+    "type": "multires",
+    "northOffset": 89.49075369632705,
+    "gnss": {
+     "lat": -33.45491021035205,
+     "lon": -70.59345737978178,
+     "alt": 613.4116325228645,
+     "rumbo": 89.49075369632705,
+     "instante": "2026-09-18T14:01:17+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0053",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0052",
+      "yaw": 61.304697869823485,
+      "pitch": -12.749026714918237,
+      "distanciaM": 9.06409846644526,
+      "text": "9,1 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0054",
+      "yaw": -118.01898158108406,
+      "pitch": -12.033784764756605,
+      "distanciaM": 9.0254701597055,
+      "text": "9,0 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0030",
+      "yaw": 11.163721147674835,
+      "pitch": -2.9565866680986486,
+      "distanciaM": 10.5,
+      "text": "19,2 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0054": {
+    "type": "multires",
+    "northOffset": 91.03412627151027,
+    "gnss": {
+     "lat": -33.45483889761161,
+     "lon": -70.59350384296839,
+     "alt": 613.4876465575495,
+     "rumbo": 91.03412627151027,
+     "instante": "2026-09-18T14:01:09.500000+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0054",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0053",
+      "yaw": 60.43762607195495,
+      "pitch": -12.953702114753327,
+      "distanciaM": 9.025471852747062,
+      "text": "9,0 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0055",
+      "yaw": -120.1003092240012,
+      "pitch": -12.853281591996677,
+      "distanciaM": 8.689108440088818,
+      "text": "8,7 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0055": {
+    "type": "multires",
+    "northOffset": 83.32921931070638,
+    "gnss": {
+     "lat": -33.454770595984336,
+     "lon": -70.59354934515721,
+     "alt": 613.5050303284839,
+     "rumbo": 83.32921931070638,
+     "instante": "2026-09-18T14:01:02.333333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0055",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0054",
+      "yaw": 67.60457857284072,
+      "pitch": -13.071000566174797,
+      "distanciaM": 8.689110055459897,
+      "text": "8,7 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0038",
+      "yaw": -115.63800447364969,
+      "pitch": 0.652716075939836,
+      "distanciaM": 9.953058436525316,
+      "text": "10,0 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0056": {
+    "type": "multires",
+    "northOffset": 126.93719139010959,
+    "gnss": {
+     "lat": -33.45438783502067,
+     "lon": -70.59364672091881,
+     "alt": 615.9461878116082,
+     "rumbo": 126.93719139010959,
+     "instante": "2026-09-18T13:56:53.666667+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0056",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0005",
+      "yaw": -125.29160348847597,
+      "pitch": -8.01551498595146,
+      "distanciaM": 8.599182475659982,
+      "text": "8,6 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0057",
+      "yaw": 64.50681643576473,
+      "pitch": -13.131268469959867,
+      "distanciaM": 9.095028815431832,
+      "text": "9,1 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0006",
+      "yaw": -167.44727899019176,
+      "pitch": -8.003422671507522,
+      "distanciaM": 10.5,
+      "text": "13,1 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0057": {
+    "type": "multires",
+    "northOffset": 126.35561768633693,
+    "gnss": {
+     "lat": -33.454468002447726,
+     "lon": -70.5936661721858,
+     "alt": 615.8244753549983,
+     "rumbo": 126.35561768633693,
+     "instante": "2026-09-18T13:57:03.500000+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0057",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0056",
+      "yaw": -114.91162016130507,
+      "pitch": -11.668571251483897,
+      "distanciaM": 9.09502848442332,
+      "text": "9,1 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0041",
+      "yaw": 48.275105930630616,
+      "pitch": -13.840316589779757,
+      "distanciaM": 8.641710661494045,
+      "text": "8,6 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0058": {
+    "type": "multires",
+    "northOffset": 306.51573794470926,
+    "gnss": {
+     "lat": -33.45478504905111,
+     "lon": -70.59367137740426,
+     "alt": 615.0942257739239,
+     "rumbo": 306.51573794470926,
+     "instante": "2026-09-18T14:00:34.333333+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0058",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0045",
+      "yaw": 62.430556707448886,
+      "pitch": -9.540000083718803,
+      "distanciaM": 8.778005662304327,
+      "text": "8,8 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0059",
+      "yaw": -133.2302233188386,
+      "pitch": -13.968699450667668,
+      "distanciaM": 8.528709091143856,
+      "text": "8,5 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0059": {
+    "type": "multires",
+    "northOffset": 301.6370975775776,
+    "yaw": 54.81743983369256,
+    "pitch": 2.8884856290973495,
+    "hfov": 100.0,
+    "gnss": {
+     "lat": -33.454861223495094,
+     "lon": -70.59366062858719,
+     "alt": 614.9727279470615,
+     "rumbo": 301.6370975775776,
+     "instante": "2026-09-18T14:00:23.500000+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0059",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0058",
+      "yaw": 51.648422892886344,
+      "pitch": -12.421426586816763,
+      "distanciaM": 8.528708988720409,
+      "text": "8,5 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0060",
+      "yaw": -121.09608613856113,
+      "pitch": -13.757014903798598,
+      "distanciaM": 8.622621171506568,
+      "text": "8,6 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   },
+   "0060": {
+    "type": "multires",
+    "northOffset": 302.1751221660834,
+    "gnss": {
+     "lat": -33.45493876513337,
+     "lon": -70.59366150619168,
+     "alt": 614.8616670293,
+     "rumbo": 302.1751221660834,
+     "instante": "2026-09-18T14:00:16.500000+00:00"
+    },
+    "multiRes": {
+     "basePath": "escenas/0060",
+     "path": "/%l/%s%y_%x",
+     "fallbackPath": "/fallback/%s",
+     "extension": "webp",
+     "tileResolution": 512,
+     "maxLevel": 4,
+     "cubeResolution": 2440
+    },
+    "hotSpots": [
+     {
+      "type": "scene",
+      "sceneId": "0059",
+      "yaw": 58.36588878917007,
+      "pitch": -12.356465943213033,
+      "distanciaM": 8.622621170819109,
+      "text": "8,6 m",
+      "cssClass": "flecha flecha-atras",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0023",
+      "yaw": -123.03462333120808,
+      "pitch": -6.1074097423278575,
+      "distanciaM": 9.418701830001572,
+      "text": "9,4 m",
+      "cssClass": "flecha flecha-adelante",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     },
+     {
+      "type": "scene",
+      "sceneId": "0024",
+      "yaw": -158.82994860434465,
+      "pitch": -6.988614399314756,
+      "distanciaM": 10.5,
+      "text": "14,6 m",
+      "cssClass": "flecha flecha-lateral",
+      "targetYaw": "sameAzimuth",
+      "targetPitch": "same"
+     }
+    ]
+   }
+  }
+ },
+ "modoNavegacion": "cursor",
+ "estiloFlecha": "dinamica",
+ "acento": "#1e90ff",
+ "zonaHoraria": "America/Santiago",
+ "escenasConContorno": [
+  "0001",
+  "0002",
+  "0003",
+  "0004",
+  "0005",
+  "0006",
+  "0007",
+  "0008",
+  "0009",
+  "0010",
+  "0011",
+  "0012",
+  "0013",
+  "0014",
+  "0015",
+  "0016",
+  "0017",
+  "0018",
+  "0019",
+  "0020",
+  "0021",
+  "0022",
+  "0023",
+  "0024",
+  "0025",
+  "0026",
+  "0027",
+  "0028",
+  "0029",
+  "0030",
+  "0031",
+  "0032",
+  "0033",
+  "0034",
+  "0035",
+  "0036",
+  "0037",
+  "0038",
+  "0039",
+  "0040",
+  "0041",
+  "0042",
+  "0043",
+  "0044",
+  "0045",
+  "0046",
+  "0047",
+  "0048",
+  "0049",
+  "0050",
+  "0051",
+  "0052",
+  "0053",
+  "0054",
+  "0055",
+  "0056",
+  "0057",
+  "0058",
+  "0059",
+  "0060"
+ ],
+ "cursor": {
+  "sensibilidad": 71,
+  "tamano": 107,
+  "modoHotspot": "invisible",
+  "colorNormal": "#ffffff",
+  "opacidadNormal": 0.6,
+  "colorSeleccionado": "#ffffff",
+  "opacidadSeleccionado": 0.7,
+  "alturaCamaraM": 2.0,
+  "radioM": 0.4,
+  "fraccionTolerancia": 0.4,
+  "distanciaMaximaM": 25.0
+ },
+ "indicesSeleccion": [
+  496,
+  481,
+  467,
+  453,
+  440,
+  428,
+  415,
+  403,
+  391,
+  376,
+  362,
+  349,
+  336,
+  323,
+  309,
+  296,
+  282,
+  268,
+  254,
+  239,
+  225,
+  211,
+  198,
+  186,
+  172,
+  159,
+  142,
+  137,
+  122,
+  110,
+  96,
+  83,
+  71,
+  58,
+  44,
+  30,
+  15,
+  112,
+  125,
+  138,
+  53,
+  67,
+  81,
+  96,
+  103,
+  77,
+  62,
+  47,
+  32,
+  17,
+  77,
+  61,
+  46,
+  31,
+  16,
+  13,
+  33,
+  50,
+  29,
+  15
+ ],
+ "puntosCad": [
+  "699e824052df47818b998d8bca555630",
+  "camino:699e824052df47818b998d8bca555630:88eaa1d234a0456fbca123147a58567d:1/4",
+  "camino:699e824052df47818b998d8bca555630:88eaa1d234a0456fbca123147a58567d:1/2",
+  "camino:699e824052df47818b998d8bca555630:88eaa1d234a0456fbca123147a58567d:3/4",
+  "f18f5a64e5bf4da4b5554b4118317e26",
+  "camino:f18f5a64e5bf4da4b5554b4118317e26:9634021d5bf24f1296eb975f8170941c:1/4",
+  "camino:f18f5a64e5bf4da4b5554b4118317e26:9634021d5bf24f1296eb975f8170941c:1/2",
+  "camino:f18f5a64e5bf4da4b5554b4118317e26:9634021d5bf24f1296eb975f8170941c:3/4",
+  "89936d0326dc404f96ab8a5d67b77890",
+  "tramo:89936d0326dc404f96ab8a5d67b77890:379b36372af9421c90c7c9bc13cf355c:1/10",
+  "tramo:89936d0326dc404f96ab8a5d67b77890:379b36372af9421c90c7c9bc13cf355c:1/5",
+  "tramo:89936d0326dc404f96ab8a5d67b77890:379b36372af9421c90c7c9bc13cf355c:3/10",
+  "tramo:89936d0326dc404f96ab8a5d67b77890:379b36372af9421c90c7c9bc13cf355c:2/5",
+  "tramo:89936d0326dc404f96ab8a5d67b77890:379b36372af9421c90c7c9bc13cf355c:1/2",
+  "tramo:89936d0326dc404f96ab8a5d67b77890:379b36372af9421c90c7c9bc13cf355c:3/5",
+  "tramo:89936d0326dc404f96ab8a5d67b77890:379b36372af9421c90c7c9bc13cf355c:7/10",
+  "tramo:89936d0326dc404f96ab8a5d67b77890:379b36372af9421c90c7c9bc13cf355c:4/5",
+  "tramo:89936d0326dc404f96ab8a5d67b77890:379b36372af9421c90c7c9bc13cf355c:9/10",
+  "379b36372af9421c90c7c9bc13cf355c",
+  "camino:379b36372af9421c90c7c9bc13cf355c:4e23976465be4b16b2c9927f7496d726:1/4",
+  "camino:379b36372af9421c90c7c9bc13cf355c:4e23976465be4b16b2c9927f7496d726:1/2",
+  "camino:379b36372af9421c90c7c9bc13cf355c:4e23976465be4b16b2c9927f7496d726:3/4",
+  "7a5120bf8874412c90c06d86199ad870",
+  "camino:7a5120bf8874412c90c06d86199ad870:f3080706f53643988a35328a172e2dfc:1/4",
+  "camino:7a5120bf8874412c90c06d86199ad870:f3080706f53643988a35328a172e2dfc:1/2",
+  "camino:7a5120bf8874412c90c06d86199ad870:f3080706f53643988a35328a172e2dfc:3/4",
+  "8397d4c6ed3545bcbf523dcffc674ec4",
+  "f11be0df8a514c5b8f7b2797f0dc1467",
+  "camino:f11be0df8a514c5b8f7b2797f0dc1467:ee67fd49bd9c4df6b76fc947b8c5c29f:1/10",
+  "camino:f11be0df8a514c5b8f7b2797f0dc1467:ee67fd49bd9c4df6b76fc947b8c5c29f:1/5",
+  "camino:f11be0df8a514c5b8f7b2797f0dc1467:ee67fd49bd9c4df6b76fc947b8c5c29f:3/10",
+  "camino:f11be0df8a514c5b8f7b2797f0dc1467:ee67fd49bd9c4df6b76fc947b8c5c29f:2/5",
+  "camino:f11be0df8a514c5b8f7b2797f0dc1467:ee67fd49bd9c4df6b76fc947b8c5c29f:1/2",
+  "camino:f11be0df8a514c5b8f7b2797f0dc1467:ee67fd49bd9c4df6b76fc947b8c5c29f:3/5",
+  "camino:f11be0df8a514c5b8f7b2797f0dc1467:ee67fd49bd9c4df6b76fc947b8c5c29f:7/10",
+  "camino:f11be0df8a514c5b8f7b2797f0dc1467:ee67fd49bd9c4df6b76fc947b8c5c29f:4/5",
+  "camino:f11be0df8a514c5b8f7b2797f0dc1467:ee67fd49bd9c4df6b76fc947b8c5c29f:9/10",
+  "b291ad5c92f6426b9648a7f54e7b075e",
+  "camino:b291ad5c92f6426b9648a7f54e7b075e:0c7ac391fc764f4aa0859e558e99ea5c:1/3",
+  "camino:b291ad5c92f6426b9648a7f54e7b075e:0c7ac391fc764f4aa0859e558e99ea5c:2/3",
+  "c91dffb0ec7045e89df279eab75690a7",
+  "camino:c91dffb0ec7045e89df279eab75690a7:0ccb053956be40c78a280556598dd168:1/3",
+  "camino:c91dffb0ec7045e89df279eab75690a7:0ccb053956be40c78a280556598dd168:2/3",
+  "a6bb17f0a69b4b009ff50f1ca1c22e7a",
+  "6a678421d97847aa9b5d4038aab0cfd5",
+  "tramo:379b36372af9421c90c7c9bc13cf355c:a6bb17f0a69b4b009ff50f1ca1c22e7a:1/6",
+  "tramo:379b36372af9421c90c7c9bc13cf355c:a6bb17f0a69b4b009ff50f1ca1c22e7a:1/3",
+  "tramo:379b36372af9421c90c7c9bc13cf355c:a6bb17f0a69b4b009ff50f1ca1c22e7a:1/2",
+  "tramo:379b36372af9421c90c7c9bc13cf355c:a6bb17f0a69b4b009ff50f1ca1c22e7a:2/3",
+  "tramo:379b36372af9421c90c7c9bc13cf355c:a6bb17f0a69b4b009ff50f1ca1c22e7a:5/6",
+  "tramo:8397d4c6ed3545bcbf523dcffc674ec4:b291ad5c92f6426b9648a7f54e7b075e:1/6",
+  "tramo:8397d4c6ed3545bcbf523dcffc674ec4:b291ad5c92f6426b9648a7f54e7b075e:1/3",
+  "tramo:8397d4c6ed3545bcbf523dcffc674ec4:b291ad5c92f6426b9648a7f54e7b075e:1/2",
+  "tramo:8397d4c6ed3545bcbf523dcffc674ec4:b291ad5c92f6426b9648a7f54e7b075e:2/3",
+  "tramo:8397d4c6ed3545bcbf523dcffc674ec4:b291ad5c92f6426b9648a7f54e7b075e:5/6",
+  "tramo:f18f5a64e5bf4da4b5554b4118317e26:c91dffb0ec7045e89df279eab75690a7:1/3",
+  "tramo:f18f5a64e5bf4da4b5554b4118317e26:c91dffb0ec7045e89df279eab75690a7:2/3",
+  "tramo:6a678421d97847aa9b5d4038aab0cfd5:7a5120bf8874412c90c06d86199ad870:1/4",
+  "tramo:6a678421d97847aa9b5d4038aab0cfd5:7a5120bf8874412c90c06d86199ad870:1/2",
+  "tramo:6a678421d97847aa9b5d4038aab0cfd5:7a5120bf8874412c90c06d86199ad870:3/4"
+ ],
+ "inicio": {
+  "punto_cad": "tramo:6a678421d97847aa9b5d4038aab0cfd5:7a5120bf8874412c90c06d86199ad870:1/2",
+  "vista": {
+   "rumbo_grados": 356.45453741127017,
+   "cabeceo_grados": 2.8884856290973495,
+   "campo_grados": 100.0
+  }
+ }
+}

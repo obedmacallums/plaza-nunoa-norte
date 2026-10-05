@@ -1,0 +1,550 @@
+/* Indicador del observador, en todos los tours. El centro queda libre
+ * y las flechas blancas se distribuyen sobre una elipse, como sobre el suelo. */
+.direcciones-tour {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 68%;
+  width: clamp(200px, 34vw, 320px);
+  height: clamp(125px, 22vw, 195px);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.direccion-tour {
+  position: absolute;
+  /* El JS lo ubica sobre la elipse con `transform` desde este origen. */
+  left: 0;
+  top: 0;
+  width: 64px;
+  height: 56px;
+  margin: 0;
+  padding: 4px;
+  border: 0;
+  background: transparent;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  filter: drop-shadow(0 7px 1px rgba(0, 0, 0, 0.38));
+}
+.direccion-tour-flecha {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  clip-path: polygon(0 65%, 50% 8%, 100% 65%, 79% 88%, 50% 54%, 21% 88%);
+  transform: scaleY(0.72) rotate(var(--direccion, 0deg));
+  transition: background 120ms ease;
+}
+/* Las etiquetas al pasar el mouse: el gris translúcido de la ficha de
+ * coordenadas. `.direccion-tour-texto` es la distancia de cada flecha
+ * central; `.etiqueta-tour`, la de los botones (`etiquetas.js`). */
+.direccion-tour-texto,
+.etiqueta-tour {
+  position: absolute;
+  padding: 4px 9px;
+  border-radius: 3px;
+  background: rgba(40, 40, 40, 0.7);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.3;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+.direccion-tour-texto {
+  left: 50%;
+  bottom: 100%;
+  transform: translate(-50%, 2px);
+  opacity: 0;
+  transition: opacity 120ms ease;
+}
+.etiqueta-tour {
+  left: 0;
+  top: 0;
+  z-index: 10;
+  font-family: Helvetica, "Nimbus Sans L", "Liberation Sans", Arial, sans-serif;
+}
+.direccion-tour:hover .direccion-tour-texto,
+.direccion-tour:focus-visible .direccion-tour-texto { opacity: 1; }
+.direccion-tour:hover .direccion-tour-flecha,
+.direccion-tour:focus-visible .direccion-tour-flecha { background: var(--acento-tenue, #cce9ff); }
+.direccion-tour:focus-visible { outline: 2px solid #fff; border-radius: 8px; }
+.direccion-tour:active { filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.4)); }
+@media (max-height: 420px) {
+  .direcciones-tour { top: 62%; height: 110px; width: 200px; }
+}
+
+/* El interruptor de la rosa, cuarto escalón de la columna de la derecha:
+ * brújula (4), ficha GNSS (64), minimapa (124) y este. La apariencia la pone
+ * `.boton-gnss`; acá va solamente dónde se apoya y cómo se lee encendido.
+ *
+ * Activo se marca en azul, y nada más: es la misma regla
+ * `[aria-expanded="true"]` que ya marca al minimapa y a la ficha GNSS, y una
+ * segunda señal propia de este botón lo separaría de ellos. */
+.direcciones-alternar {
+  position: absolute;
+  right: 4px;
+  bottom: 184px;
+  z-index: 3;
+}
+.direcciones-alternar:focus-visible { outline: 2px solid #1e90ff; outline-offset: 3px; }
+
+/* El contorno de la zona tratada: un lienzo transparente sobre el panorama y,
+ * quinto escalón de la columna derecha, el botón que lo enciende. El lienzo
+ * queda por debajo de los hotspots y del cursor (`z-index: 2`) y no recibe
+ * gestos: el panorama sigue arrastrándose a través de él. El color del trazo
+ * no se declara acá sino en `contorno-mascara.js`, que lo toma del acento. */
+.contorno-mascara {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.contorno-alternar {
+  position: absolute;
+  right: 4px;
+  bottom: 244px;
+  z-index: 3;
+}
+.contorno-alternar:focus-visible { outline: 2px solid #1e90ff; outline-offset: 3px; }
+
+/* Las dos flechas de navegación.
+ *
+ * Pannellum dibuja un punto genérico si un hotspot no trae `cssClass`; estas
+ * reglas lo reemplazan por una flecha que se lee de un vistazo. El icono se
+ * dibuja con un borde CSS y no con una imagen: un archivo menos en el ZIP y
+ * ninguna petición extra por escena.
+ *
+ * El selector arranca en `.pnlm-hotspot-base` y no en `.pnlm-hotspot`:
+ * `createHotSpot` en pannellum.js sólo agrega esta última clase cuando el
+ * hotspot NO trae `cssClass` (rama `else` de un `if (hs.cssClass) ... else
+ * ...`). Como sí le pasamos `cssClass` (ver `core/tour/pannellum.py`), la
+ * clase real que termina en el div es `pnlm-hotspot-base flecha
+ * flecha-<sentido>`, nunca `pnlm-hotspot`. Verificado en el fuente 2.5.7 y
+ * midiendo un tour real servido por HTTP en Chrome. */
+
+.pnlm-hotspot-base.flecha {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+  /* `transform` queda afuera a propósito: Pannellum reescribe
+   * `div.style.transform` en cada frame para mover y orientar el hotspot
+   * (translate + translateZ + rotate), y ese estilo inline gana siempre
+   * sobre esta regla. Transicionarlo haría que la flecha arrastre un
+   * "fantasma" detrás del panorama mientras el usuario arrastra la vista. */
+  transition: background 120ms ease;
+}
+
+.pnlm-hotspot-base.flecha:hover {
+  background: #ffffff;
+}
+
+/* El triángulo: un cuadrado sin fondo con dos bordes, girado 45°. */
+.pnlm-hotspot-base.flecha::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border-style: solid;
+  border-color: var(--acento, #1e90ff);
+  border-width: 3px 3px 0 0;
+  /* El crecimiento al pasar el mouse vive acá y no en `transform` del
+   * contenedor: Pannellum nunca toca el `::after`, así que esta transición
+   * sí se ve. */
+  transition: transform 120ms ease;
+}
+
+.pnlm-hotspot-base.flecha:hover::after {
+  transform: translate(-50%, -50%) scale(1.12) translate(50%, 50%);
+}
+
+.pnlm-hotspot-base.flecha-lateral::after,
+.pnlm-hotspot-base.flecha-adelante::after {
+  transform: translate(-50%, -35%) rotate(-45deg);
+}
+
+.pnlm-hotspot-base.flecha-lateral:hover::after,
+.pnlm-hotspot-base.flecha-adelante:hover::after {
+  transform: translate(-50%, -35%) rotate(-45deg) scale(1.12);
+}
+
+.pnlm-hotspot-base.flecha-atras::after {
+  transform: translate(-50%, -65%) rotate(135deg);
+}
+
+.pnlm-hotspot-base.flecha-atras:hover::after {
+  transform: translate(-50%, -65%) rotate(135deg) scale(1.12);
+}
+
+/* La flecha dinámica: una calcomanía apoyada en el piso.
+ *
+ * Tres cosas la separan del ícono plano de arriba, y las tres hacen falta
+ * para que se lea como pintada sobre el asfalto y no como una chapa flotando
+ * de frente a la cámara:
+ *
+ *   - `rotateZ(var(--flecha-rumbo) - 45deg)` la orienta hacia el destino. El
+ *     `- 45deg` es el mismo ajuste de siempre: la esquina que dibuja
+ *     `border-width` sin rotar ya apunta arriba-a-la-derecha (45°), así que
+ *     restarlos hace que un rumbo de 0° apunte derecho hacia arriba.
+ *     `flecha-dinamica.js` recalcula ese rumbo en cada frame restándole el
+ *     yaw de la cámara, que es lo que la deja clavada al mundo en vez de a
+ *     la pantalla.
+ *   - `rotateX(var(--flecha-escorzo))` la acuesta contra el suelo. El ángulo
+ *     sale del `pitch` del hotspot (ver `escorzoDe` en el módulo) y es fijo:
+ *     el piso del destino se ve siempre igual de rasante.
+ *   - `perspective()` hace que el extremo lejano quede más angosto que el
+ *     cercano. Sin esto la flecha se achata pero de forma uniforme, que lee
+ *     como un ícono aplastado y no como algo apoyado en el piso. El valor es
+ *     chico a propósito: el ícono mide decenas de píxeles, y una perspectiva
+ *     larga no produciría ninguna diferencia visible.
+ *
+ * El orden importa: `rotateZ` va último para que la orientación ocurra
+ * dentro del plano del piso, antes de que `rotateX` lo acueste.
+ *
+ * La especificidad (tres clases) le gana a las reglas de flecha-adelante/
+ * flecha-atras (dos clases) sin necesitar `!important`. */
+.con-flecha-dinamica .pnlm-hotspot-base.flecha::after {
+  /* Más grande que el ícono plano (14px) porque el escorzo se come dos
+   * tercios de la altura: a 68°, 30px de alto se ven como 11. El div sigue
+   * midiendo 44px, así que sigue entrando entero en el área clickeable. */
+  width: 30px;
+  height: 30px;
+  border-width: 5px 5px 0 0;
+  border-color: #ffffff;
+  /* Sin transición sobre `transform`: acá el módulo lo reescribe en cada
+   * frame para seguir el giro de la vista, así que una transición de 120ms
+   * no suaviza nada —nunca llega a destino antes de que el valor cambie— y
+   * deja la flecha arrastrándose atrás del piso al que dice estar pegada.
+   * `border-color` sí se transiciona, que es lo único del hover que queda. */
+  transition: border-color 120ms ease;
+  /* El ícono ya no vive dentro de una chapa blanca que lo despegue del
+   * fondo: sobre asfalto claro, un contorno blanco sin sombra desaparece. */
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.75));
+  transform: translate(-50%, -50%) perspective(90px)
+    rotateX(var(--flecha-escorzo, 0deg))
+    rotateZ(calc(var(--flecha-rumbo, 0deg) - 45deg));
+}
+
+.con-flecha-dinamica .pnlm-hotspot-base.flecha:hover::after {
+  border-color: var(--acento, #1e90ff);
+  transform: translate(-50%, -50%) perspective(90px)
+    rotateX(var(--flecha-escorzo, 0deg))
+    rotateZ(calc(var(--flecha-rumbo, 0deg) - 45deg)) scale(1.12);
+}
+
+/* Sin chapa circular: Pannellum la posiciona siempre de frente a la cámara y
+ * su `transform` se reescribe en cada frame, así que no hay forma de
+ * acostarla contra el piso junto con la flecha. Un círculo de frente
+ * alrededor de una flecha ya acostada mezcla dos perspectivas en un mismo
+ * ícono y delata que todo está pegado a la pantalla. El div sigue midiendo
+ * 44px y sigue siendo el área clickeable: lo único que desaparece es lo que
+ * se dibuja. */
+.con-flecha-dinamica .pnlm-hotspot-base.flecha {
+  background: transparent;
+  box-shadow: none;
+}
+
+.con-flecha-dinamica .pnlm-hotspot-base.flecha:hover {
+  background: transparent;
+}
+
+/* El cursor de piso: un círculo acostado en el suelo que sigue al mouse.
+ *
+ * `cursor-piso.js` le fija posición y tamaño en píxeles en cada movimiento
+ * del mouse; acá va solo la apariencia. `pointer-events: none` es
+ * imprescindible: sin eso el propio círculo se comería los clics y los
+ * movimientos que tiene que seguir. */
+.cursor-piso {
+  position: absolute;
+  /* El JS lo ubica con `transform: translate(...)` desde este origen. */
+  left: 0;
+  top: 0;
+  display: none;
+  pointer-events: none;
+  box-sizing: border-box;
+  color: var(--cursor-color-normal, #fff);
+  border-radius: 50%;
+  /* Dos elipses concéntricas forman una banda: su grosor también se
+   * aplana con la perspectiva, en vez de quedar fijo en píxeles. */
+  background: radial-gradient(ellipse closest-side,
+    transparent 82%, currentColor 84%, currentColor 98%, transparent 100%);
+  opacity: calc(var(--cursor-opacidad-normal, 0.6) * var(--cursor-desvanecimiento, 1));
+  /* Un anillo blanco sobre asfalto claro sería invisible sin la sombra. */
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55));
+  transition: color 650ms ease-in-out, opacity 650ms ease-in-out;
+  z-index: 2;
+}
+
+/* Dentro de la zona de un destino se usa el estilo seleccionado. */
+.cursor-piso-activo {
+  color: var(--cursor-color-seleccionado, #ffffff);
+  opacity: calc(var(--cursor-opacidad-seleccionado, 0.65) * var(--cursor-desvanecimiento, 1));
+}
+
+/* Donde hay hover, el cursor de piso reemplaza a las flechas.
+ *
+ * En táctil no existe el hover: el dedo no se pasea por el piso antes de
+ * tocar, así que ahí las flechas siguen siendo la afordancia correcta y esta
+ * regla no se aplica.
+ *
+ * La condición es hover a secas y no `(hover: hover) and (pointer: fine)`:
+ * el motivo está explicado junto a `HAY_HOVER` en `cursor-piso.js`, y las
+ * dos mitades tienen que consultar exactamente lo mismo o el tour queda sin
+ * flechas y sin círculo.
+ *
+ * Y la media query sola tampoco basta: acotada así, dependería únicamente
+ * de que el dispositivo tenga hover, sin que nada
+ * garantice que el cursor de piso llegó a arrancar (el script pudo no
+ * cargarse, o el visor pudo tirar una excepción antes de inicializarlo). Por
+ * eso el selector va además scopeado a `.con-cursor-de-piso`, una clase que
+ * `cursor-piso.js` agrega al contenedor recién cuando `iniciarCursorDePiso`
+ * termina de arrancar. Esta regla ya no solo *consulta* la misma condición
+ * que el JS: *depende* de que el JS haya corrido, así que las flechas solo
+ * pueden desaparecer cuando de verdad hay algo que las reemplaza. */
+@media (hover: hover) {
+  .con-cursor-de-piso .pnlm-hotspot-base.flecha {
+    display: none;
+  }
+}
+.control-gnss {
+  position: absolute;
+  right: 4px;
+  bottom: 64px;
+  z-index: 3;
+  font-size: 13px;
+}
+
+/* Flecha del destino seleccionado, orientada antes de acostarla en el piso. */
+.cursor-piso::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--cursor-flecha-tamano);
+  height: var(--cursor-flecha-tamano);
+  clip-path: polygon(0 65%, 50% 8%, 100% 65%, 79% 88%, 50% 54%, 21% 88%);
+  transform: translate(-50%, -50%) scaleY(var(--cursor-flecha-escala, 1))
+    rotate(var(--cursor-flecha-rumbo, 0deg));
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 650ms ease-in-out;
+}
+.cursor-piso-activo::after { opacity: 1; }
+
+/* El puntero comunica si el clic navega o si se puede arrastrar la vista.
+ * Las clases de arrastre del propio visor conservan prioridad. */
+.con-cursor-de-piso, .con-cursor-de-piso .pnlm-ui { cursor: grab; }
+.con-cursor-de-piso.cursor-sobre-destino,
+.con-cursor-de-piso.cursor-sobre-destino .pnlm-ui { cursor: pointer; }
+.con-cursor-de-piso .pnlm-ui.pnlm-grabbing { cursor: grabbing; }
+.hotspots-circulares {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+.hotspots-circulares path {
+  fill: var(--cursor-color-normal, #fff);
+  fill-rule: evenodd;
+  stroke: none;
+  opacity: var(--cursor-opacidad-normal, 0.6);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.boton-gnss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  color: #222;
+}
+
+.boton-gnss:hover { background: #f8f8f8; }
+.boton-gnss[aria-expanded="true"] { color: var(--acento, #1e90ff); }
+
+.ficha-gnss {
+  position: absolute;
+  right: 60px;
+  bottom: 0;
+  width: 264px;
+  max-width: calc(100vw - 100px);
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+  padding: 14px;
+  border-radius: 3px;
+  /* Gris translúcido, no negro: deja ver el panorama detrás. La sombra del
+   * texto le devuelve el contraste sobre un cielo claro. */
+  background: rgba(40, 40, 40, 0.7);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  user-select: text;
+  cursor: default;
+}
+
+.ficha-gnss[hidden], .mapa-gnss[hidden] { display: none; }
+.cabecera-gnss { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.cabecera-gnss strong { font-size: 15px; }
+.cerrar-gnss {
+  border: 0;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+.ficha-gnss dl { display: grid; grid-template-columns: 1fr auto; gap: 10px 12px; margin: 14px 0; }
+.ficha-gnss dt { color: #ccc; }
+.ficha-gnss dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+.mapa-gnss { display: block; color: #fff; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.2); }
+.mapa-gnss:hover { color: #75bbff; }
+.control-gnss button:focus-visible, .mapa-gnss:focus-visible { outline: 2px solid #1e90ff; outline-offset: 3px; }
+/* Nombre del proyecto, en la esquina superior derecha del panorama. */
+.pnlm-panorama-info {
+  top: 10px;
+  right: 10px;
+  bottom: auto;
+  left: auto;
+  max-width: calc(100% - 70px);
+  border-radius: 3px;
+  /* El mismo gris translúcido de la ficha GNSS, en lugar del negro al 70 %
+   * que trae Pannellum. */
+  background-color: rgba(40, 40, 40, 0.7);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.pnlm-title-box, .pnlm-author-box { margin-left: auto; }
+
+.minimapa {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 270px;
+  height: 145px;
+  max-width: calc(100% - 80px);
+  max-height: calc(100% - 100px);
+  z-index: 3;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px #0006;
+  cursor: default;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  transition: height 450ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 350ms ease, transform 350ms ease, visibility 0s;
+}
+.minimapa-oculto {
+  opacity: 0;
+  transform: translateY(24px);
+  visibility: hidden;
+  pointer-events: none;
+  transition-delay: 0s, 0s, 0s, 350ms;
+}
+.minimapa-alternar {
+  position: absolute;
+  right: 4px;
+  bottom: 124px;
+  z-index: 3;
+}
+.minimapa-alternar:focus-visible { outline: 2px solid #1e90ff; outline-offset: 3px; }
+.minimapa-ampliado { height: 280px; }
+@media (prefers-reduced-motion: reduce) {
+  .minimapa { transition: none; }
+}
+.minimapa-lienzo { width: 100%; height: 100%; background: #e5e9ed; }
+.minimapa-ampliar, .minimapa-centrar, .minimapa-trayecto {
+  position: absolute;
+  left: 8px;
+  bottom: 22px;
+  z-index: 1000;
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+  border: 0;
+  border-radius: 4px;
+  background: white;
+  color: #555;
+  box-shadow: 0 1px 5px #0004;
+  cursor: pointer;
+  font: 24px/22px sans-serif;
+}
+.minimapa-centrar { left: 48px; font-size: 30px; }
+.minimapa-trayecto { left: 88px; }
+.minimapa button:hover { color: var(--acento, #1e90ff); }
+.minimapa button:focus-visible { outline: 3px solid #1683fa; outline-offset: -3px; }
+.minimapa .leaflet-control-zoom,
+.minimapa-centrar, .minimapa-trayecto { display: none; }
+.minimapa-ampliado .leaflet-control-zoom,
+.minimapa-ampliado .minimapa-centrar,
+.minimapa-ampliado .minimapa-trayecto { display: block; }
+.minimapa-norte {
+  position: absolute;
+  top: 8px;
+  z-index: 1000;
+  padding: 5px 7px;
+  border-radius: 4px;
+  background: #fffffff0;
+  color: #334155;
+  box-shadow: 0 1px 5px #0002;
+  font: 12px/16px sans-serif;
+  pointer-events: none;
+}
+.minimapa-norte { right: 8px; font-weight: bold; }
+.minimapa-orientacion { pointer-events: none; }
+.minimapa-punto { filter: drop-shadow(0 1px 2px #0006); }
+.minimapa-ampliado .minimapa-ampliar svg { transform: rotate(180deg) scale(0.8); }
+.minimapa-estado {
+  position: absolute;
+  top: 42px;
+  left: 6px;
+  z-index: 1000;
+  background: #fff;
+  color: #333;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font: 12px sans-serif;
+}
+.minimapa-estado[hidden] { display: none; }
+.minimapa .leaflet-control-attribution { font-size: 10px; }
+
+/* El celular: un dispositivo sin hover, donde el dedo no se pasea por el piso
+ * antes de tocar.
+ *
+ * - Los íconos de cada destino (la flecha en un círculo) se esconden: navegan
+ *   las flechas de dirección del centro (`direcciones.js`), que ahí arrancan
+ *   visibles. Dos juegos de flechas a la vez confunden.
+ * - Esas flechas se esconden mientras el minimapa está ampliado o la ficha
+ *   GNSS abierta, porque se superponen con ellos; `minimapa.js` y
+ *   `ficha-gnss.js` marcan el contenedor con `mapa-ampliado` y
+ *   `ficha-gnss-abierta`. Escondidas no reciben toques. Al cerrarlos vuelven.
+ * - Los controles de arriba a la izquierda (zoom y pantalla completa, de
+ *   26 px) crecen a ~36 px: más fáciles de tocar y todavía más chicos que los
+ *   botones de la derecha, que miden 50 px y se dejan como están. */
+@media (hover: none) {
+  .pnlm-hotspot-base.flecha { display: none; }
+  .mapa-ampliado .direcciones-tour,
+  .ficha-gnss-abierta .direcciones-tour { display: none; }
+  .pnlm-controls-container { transform: scale(1.4); transform-origin: 0 0; }
+}

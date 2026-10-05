@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<title>Plaza Ñuñoa Norte</title>
+<link rel="stylesheet" href="pannellum/pannellum.css">
+<link rel="stylesheet" href="pannellum/leaflet.css">
+<link rel="stylesheet" href="pannellum/tour.css">
+<style>
+  html, body { margin: 0; height: 100%; background: #111; }
+  #tour { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div id="tour"></div>
+<script src="pannellum/paleta.js"></script>
+<script src="pannellum/pannellum.js"></script>
+<script src="pannellum/vista.js"></script>
+<script src="pannellum/precarga.js"></script>
+<script src="pannellum/cursor-piso.js"></script>
+<script src="pannellum/flecha-dinamica.js"></script>
+<script src="pannellum/direcciones.js"></script>
+<script src="pannellum/contorno-mascara.js"></script>
+<script src="pannellum/zoom-vertical.js"></script>
+<script src="pannellum/ficha-gnss.js"></script>
+<script src="pannellum/etiquetas.js"></script>
+<script src="pannellum/leaflet.js"></script>
+<script src="pannellum/minimapa.js"></script>
+<script>
+// La configuración vive en un archivo aparte y no incrustada acá: es lo que
+// permite cambiar un parámetro reescribiendo unos kilobytes en vez de
+// regenerar los mosaicos. El tour nunca funcionó con file:// —WebGL se niega a
+// usar esas imágenes como textura—, así que pedirla por fetch no le quita
+// ningún caso de uso.
+fetch('configuracion.json')
+  .then(function (respuesta) {
+    if (!respuesta.ok) {
+      throw new Error('No se pudo leer configuracion.json: ' + respuesta.status);
+    }
+    return respuesta.json();
+  })
+  .then(function (datos) {
+    var visor = pannellum.viewer('tour', datos.pannellum);
+    // Lo que se está mirando, para «Set inicio» en la vista previa de la
+    // aplicación. El inicio elegido vuelve en `configuracion.json`.
+    window.vistaDelTour = function () {
+      return {escena: visor.getScene(), yaw: visor.getYaw(), pitch: visor.getPitch(),
+        hfov: visor.getHfov()};
+    };
+    var contenedor = document.getElementById('tour');
+    // Antes que los módulos que agregan botones: los que vengan después los
+    // adopta igual, pero así ninguno alcanza a mostrar el tooltip nativo.
+    iniciarEtiquetas(contenedor);
+    // Un solo bucle de cuadros para todos los módulos que siguen a la vista.
+    var vista = seguirLaVista(visor, contenedor);
+    // En una pantalla vertical baja el ancho de campo para que el alto no se
+    // abra hasta el ojo de pez.
+    iniciarZoomVertical(visor, contenedor);
+    iniciarPrecarga(visor, datos.pannellum.scenes);
+    // Antes que ningún módulo: publica las variables CSS que `tour.css` ya
+    // está esperando, y devuelve los tonos que el minimapa necesita como
+    // valores concretos. Un tour anterior a la semilla no trae `acento` y
+    // `aplicarPaleta` cae en el azul de siempre.
+    var paleta = aplicarPaleta(document, datos.acento);
+    iniciarFichaGnss(visor, contenedor, datos.pannellum.scenes, datos.zonaHoraria);
+    iniciarMinimapa(visor, contenedor, datos.pannellum.scenes, paleta, vista);
+    // En todos los tours, lineales o interconectados: el módulo lee los
+    // destinos de los hotspots de cada escena, y un tour lineal solo tiene
+    // anterior y siguiente.
+    iniciarDirecciones(visor, contenedor, vista);
+    // El botón del contorno solo existe si alguna escena tiene una zona tratada
+    // (`escenasConContorno`); un tour anterior no trae la clave y no lo muestra.
+    iniciarContornoMascara(visor, contenedor, datos.pannellum.scenes,
+      datos.escenasConContorno, paleta, vista);
+    // El modo elegido para este tour. Se compara contra 'flechas' y no contra
+    // 'cursor': un tour generado antes de que el modo existiera no trae la
+    // clave, y `undefined !== 'flechas'` lo deja con el cursor de piso, que
+    // es lo que ese tour ya hacía.
+    //
+    // Alcanza con no arrancar el módulo: la clase `con-cursor-de-piso` la
+    // agrega él, y sin esa clase `tour.css` deja las flechas visibles. El
+    // modo no necesita ninguna regla de estilo propia.
+    if (datos.modoNavegacion !== 'flechas') {
+      // Aun en modo cursor, el módulo devuelve null donde no hay hover (en
+      // táctil) y ahí también quedan las flechas.
+      iniciarCursorDePiso(visor, contenedor, datos.cursor, vista);
+    } else if (datos.estiloFlecha === 'dinamica') {
+      // `estiloFlecha` siempre se escribe en configuracion.json (nunca
+      // queda ausente en un tour generado por esta versión del código):
+      // comparar a favor de 'dinamica' es simplemente la lectura afirmativa
+      // y directa del valor persistido, no una guarda de retrocompatibilidad
+      // para un caso de clave ausente que en la práctica no puede darse.
+      iniciarFlechaDinamica(visor, contenedor, vista);
+    }
+  })
+  .catch(function (error) {
+    // Sin esto, un fallo acá deja la pantalla en negro sin ninguna pista.
+    console.error('El tour no pudo iniciarse:', error);
+    document.getElementById('tour').textContent =
+      'No se pudo cargar el tour: ' + error.message;
+  });
+</script>
+</body>
+</html>
